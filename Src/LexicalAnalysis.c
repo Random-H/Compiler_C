@@ -149,7 +149,7 @@ void CFFX(int *p,char *cs)
     char buf[16];
     char bufout[256];
     char ch;
-    FILE  *f = fopen("LexicalAnalysis.txt","w+");
+    FILE  *f = fopen("LexicalAnalysis.txt","w");
     memset(buf,0,sizeof(buf));
     while(cs[*p] != '\0')
     {
@@ -223,4 +223,5 @@ void CFFX(int *p,char *cs)
         }
         pNext(p);
     }
+    fclose(f);
 }
