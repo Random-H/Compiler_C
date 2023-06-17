@@ -37,8 +37,11 @@ int main()
                 CFFX(p,CharStream);
             }
             break;
-        case '2':
-            InputToken(token);
+            case '2':
+            {
+                InputToken(token);
+            }
+            
             break;
         case '3':
             exit(1);
