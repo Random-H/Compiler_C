@@ -21,9 +21,9 @@ int main()
     {
         char c;
         printf("*************************************************\n");
-        printf("1.璇嶆硶鍒嗘瀽\n");
-        printf("1.璇硶鍒嗘瀽\n");
-        printf("1.璇嶆硶鍒嗘瀽\n");
+        printf("1.词法分析\n");
+        printf("2.语法分析\n");
+        printf("3.中间代码生成\n");
         printf("*************************************************\n");
         c = getchar();
         switch (c)
@@ -31,15 +31,18 @@ int main()
             case '1':
             {
                 int index = 0,i;
-                int *p = &index;
+                int *p1 = &index;
                 memset(CharStream,0,sizeof (CharStream));
                 word_sum = ReadAndDeal_C_File(CharStream);
-                CFFX(p,CharStream);
+                CFFX(p1,CharStream);
             }
             break;
             case '2':
             {
-                InputToken(token);
+                int index =0;
+                int *p2 = &index;
+                int len = InputToken(token);
+                lrparser(token,p2);
             }
             
             break;

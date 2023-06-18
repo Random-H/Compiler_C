@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define KNUM    16
+#define KNUM    15
 #define OPNUM 	17
 #define DENUM 	8
 
@@ -14,7 +14,7 @@ typedef struct token
 
 char key[][10]={"main","int","double","char","struct","return","float",
                 "while","if","else","void","typedef","unsigned","long",
-                "do","for"};
+                "for"};
 int keyNum[KNUM];
 
 
